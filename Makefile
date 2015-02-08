@@ -1,7 +1,9 @@
 CC = gcc
-log : log.o
-	$(CC) -o log log.o
-log.o : log.c log.h
-	$(CC) -c log.c
+OBJ = main.o log.o
+fileshare : $(OBJ)
+	$(CC) -o  fileshare $(OBJ) -lpthread
+main.o : log.h
+log.o : log.h
+.PHONY : clean
 clean :
-	rm -rf *.o
+	rm -rf fileshare *.log *.o
