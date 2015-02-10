@@ -107,7 +107,7 @@ static void *handle_request(void *argv)
 	int i = 0;
 	int err = -1;
 
-	printf("selecting for clients\n");
+//	printf("selecting for clients\n");
 	while (request_run)
 	{
 		maxfd = -1;
